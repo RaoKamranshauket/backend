@@ -32,31 +32,7 @@
 </form>
 </div>
   <div id="tblDiv" class="container border mt-3">
-  <table id="example" class="display table-bordered" style="width:100%">
-    <thead style="background-color: #333;
-    color: #fff;">
-        <tr >
-            <th>Date</th>
-            <th>Book On Image</th>
-            <th>Time In</th>
-            <th>Book on Location</th>
-            {{-- <th>Book Off Image Timeout</th>
-            <th>Time Out</th>
-            <th>Book Off Location</th>
-            <th>Total hours</th> --}}
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($dishPrice as $dish)
-        <tr>
-            <td>{{ $dish->dishCategory }}</td>
-            <td>{{ $dish->dishDescription}}</td>
-            <td>{{ $dish->dishName }}</td>
-            <td>{{ $dish->dishUnitPrice }}</td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
+  
 </div>
 
 </body>
