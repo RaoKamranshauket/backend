@@ -36,7 +36,12 @@ class BackendController extends Controller
         //   print_r($dishPrice);
         // }
         //return response()->json($dishPrice);
-        return view('welcome', compact('dishPrice'));
+        $chickenDishes = collect($dishPrice)->filter(function ($dish) {
+            return str_contains(strtolower($dish->dishName), 'chicken');
+        });
+        echo '<pre>';
+        print_r($chickenDishes);
+        return view('dishView', compact('dishPrice'));
     }
     else
     {
