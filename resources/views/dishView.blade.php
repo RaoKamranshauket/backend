@@ -23,8 +23,9 @@
     <h1 class="display-4 center bg-light">Back End Task</h1>
       </div>
   <div id="tblDiv" class="container border mt-3">
+    <h3 >List all dishes with a price of one thousand and above</h3>
   <table id="example" class="display table-bordered" style="width:100%">
-    <thead style="background-color: #333;
+    <thead class="text-center" style="background-color: #333;
     color: #fff;">
         <tr >
             <th>#</th>
@@ -45,7 +46,20 @@
     </tbody>
 </table>
 </div>
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable({
 
+        // hide the "Show N entries" label
+        "language": {
+            "lengthMenu": "_MENU_",
+        },
+        // hide the search box
+        searching: false
+    });
+} );
+
+</script>
 </body>
 
 

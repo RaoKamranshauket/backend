@@ -25,22 +25,10 @@ class BackendController extends Controller
         })
         ->values()
                 ->all();
-    //     echo '<pre>';
-    //    print_r($dishPrice);
-    //    echo count($dishPrice);
-        // foreach ($data->DishesData as $dish) {
-        //          if ($dish->dishUnitPrice >= 1000) {
-        //         $dishPrice[]=$dish;
-        //     }
-        //   echo '<pre>';
-        //   print_r($dishPrice);
-        // }
-        //return response()->json($dishPrice);
+
         $chickenDishes = collect($dishPrice)->filter(function ($dish) {
             return str_contains(strtolower($dish->dishName), 'chicken');
         });
-        echo '<pre>';
-        print_r($chickenDishes);
         return view('dishView', compact('dishPrice'));
     }
     else
